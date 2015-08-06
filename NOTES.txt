@@ -1,0 +1,13 @@
+SO: Ubuntu 15.04
+IDE: ATOM(github)
+Repositório: GITHUB[https://github.com/brucealbuquerque/agenda]
+
+
+
+Using:
+grails: 3.0.4
+groovy: 2.4.4
+Postgresql: 9.4
+HTML: 5
+CSS: 3
+Jquery: ??
