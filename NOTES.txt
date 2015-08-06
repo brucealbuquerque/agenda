@@ -14,5 +14,9 @@ Jquery: ??
 
 
 ---
-dependências adicionadas: 
+dependências adicionadas:
 compile 'org.postgresql:postgresql:9.4-1200-jdbc41'
+
+---
+Cores baseadas no Material Guide Color do google [https://www.google.com/design/spec/style/color.html#color-color-palette]
+Font: Roboto

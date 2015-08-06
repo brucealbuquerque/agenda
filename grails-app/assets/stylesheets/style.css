@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*General*/
+h1{}
+a{
+  text-decoration: none;
+}
+a:hover{}
+main{
+  font-family: Roboto;
+}
+nav{}
+li{}
+
+/*Theme*/
+.wrapper{
+  width: 70em;
+  margin: 0 auto;
+  padding: .5em;
+  border: solid 1px #ccc;
+}
+
+
+/* buttons */
+.btn{
+  border: solid 1px #ccc;
+  padding: .5em;
+  outline: none;
+}
+.btn-add{
+  background-color:#01579b;
+  color: #fff;
+}
+.btn-edit{}
+.btn-del{}
