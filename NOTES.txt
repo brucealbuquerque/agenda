@@ -1,13 +1,17 @@
 SO: Ubuntu 15.04
 IDE: ATOM(github)
 Repositório: GITHUB[https://github.com/brucealbuquerque/agenda]
+Gerenciador de dependências: Gradle
 
-
-
-Using:
+Usando:
 grails: 3.0.4
 groovy: 2.4.4
 Postgresql: 9.4
 HTML: 5
 CSS: 3
 Jquery: ??
+
+
+---
+dependências adicionadas: 
+compile 'org.postgresql:postgresql:9.4-1200-jdbc41'
