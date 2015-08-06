@@ -2,6 +2,7 @@ SO: Ubuntu 15.04
 IDE: ATOM(github)
 Repositório: GITHUB[https://github.com/brucealbuquerque/agenda]
 Gerenciador de dependências: Gradle
+Quebra-galho: NANO
 
 Usando:
 grails: 3.0.4
