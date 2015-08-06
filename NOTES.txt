@@ -20,3 +20,9 @@ compile 'org.postgresql:postgresql:9.4-1200-jdbc41'
 ---
 Cores baseadas no Material Guide Color do google [https://www.google.com/design/spec/style/color.html#color-color-palette]
 Font: Roboto
+
+---
+links:
+http://www.grailsbrasil.com.br/post/show/2938
+http://www.grailsbrasil.com.br/post/show/709
+http://www.grailsbrasil.com.br/post/show/1576
