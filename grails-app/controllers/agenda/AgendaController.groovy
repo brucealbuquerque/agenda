@@ -15,6 +15,7 @@ class AgendaController {
 
     def show(Agenda agenda) {
         respond agenda
+        //[agenda: Agenda.get(params.id)]
     }
 
     def create() {

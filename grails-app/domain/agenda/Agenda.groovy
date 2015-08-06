@@ -4,11 +4,13 @@ class Agenda {
 
     String tarefa
     Date prazo
-    String categoria
+    Categoria categoria
+
+    static belongsTo = Categoria
 
     static constraints = {
       tarefa nullable: false, black: false
       prazo nullable: false, black: false
-      categoria inList: ["Pessoal","Profissional"], nullable: false, black: false
+      //categoria inList:[categoria.nome.label] , nullable: false, black: false
     }
 }

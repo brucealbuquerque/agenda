@@ -9,30 +9,44 @@
     <body>
       <div class="wrapper">
         <header>
-          <h1></h1>
-        </header>
-        <main>
-          <div role="main">
-              <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-              <g:if test="${flash.message}">
-                  <div class="message" role="status">${flash.message}</div>
-              </g:if>
-              <f:table collection="${agendaList}" />
-
-              <div class="pagination">
-                  <g:paginate total="${agendaCount ?: 0}" />
-              </div>
+          <div role="navigation">
+              <ul>
+                  <li class="right">
+                    <a class="btn btn-new btn-small" href="${createLink(uri: '/categoria')}">
+                      Nova Categoria
+                    </a>
+                  </li>
+                  <!--
+                  <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                -->
+              </ul>
           </div>
-          <nav>
+        </header>
+          <main>
+            <div role="main">
+                <h1>
+                  Atividades
+                </h1>
+                <g:if test="${flash.message}">
+                    <div class="message" role="status">${flash.message}</div>
+                </g:if>
+                <f:table collection="${agendaList}" />
+
+                <div class="pagination">
+                    <g:paginate total="${agendaCount ?: 0}" />
+                </div>
+            </div>
+          </main>
+          <nav class="clearfix">
             <ul>
               <li>
-                <g:link action="create" class="btn btn-add">
+                <g:link action="create" class="btn btn-add btn-small">
                   <g:message code="Adicionar Tarefa" />
                 </g:link>
               </li>
             </ul>
           </nav>
-        </main>
+
         <footer>
         </footer>
       </div>
@@ -41,12 +55,5 @@
           <g:message code="default.link.skip.label" default="Skip to content&hellip;"/>
         </a>
       -->
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/agenda')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-            </ul>
-        </div>
-
     </body>
 </html>
