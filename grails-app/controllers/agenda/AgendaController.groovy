@@ -40,8 +40,9 @@ class AgendaController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'agenda.label', default: 'Agenda'), agenda.id])
-                redirect agenda
+                flash.message = message(code: 'default.created.message', args: [message(code: 'agenda.label', default: 'Tarefa: '), agenda.tarefa])
+                redirect (action: 'index')
+                //redirect agenda
             }
             '*' { respond agenda, [status: CREATED] }
         }

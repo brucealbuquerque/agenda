@@ -28,9 +28,9 @@ h1{
 }
 a{
   text-decoration: none;
+  color: #424242;
 }
-a:hover{}
-
+a:visited{color: #424242;}
 main, nav{
   margin: 1em;
 }
@@ -46,6 +46,7 @@ main table th{
   background-color: #f2f2f2;
   font-weight: normal;
   padding: .3em;
+  text-align: left;
 }
 main table th a{
   color: #222;
@@ -54,6 +55,7 @@ main table td{
   padding: .5em;
   border: solid 1px #ccc;
 }
+main table td a:hover{text-decoration: underline;}
 
 input[type="text"], select{
   border: solid 1px #ccc;
@@ -90,14 +92,22 @@ fieldset{
 
 /* buttons */
 .btn{
-   border: none;
+  margin: 0 .2em;
+  border: none;
   outline: none;
   border-radius: 3px;
   color: #fff;
 }
+ul li:first-child {
+  margin-left: 0;
+}
+ul li:last-child {
+  margin-right: 0;
+}
 .btn:hover{
   cursor: pointer;
 }
+.btn:visited{color: #fff;}
 .btn-add{
   background-color:#01579b;
 }
@@ -119,10 +129,39 @@ fieldset{
 .fieldcontain{
   margin-bottom: .5em;
   padding: 0 0 0 .5em;
+
 }
 .required{
 
 }
 .required-indicator{
   color: #f00;
+}
+.message{
+  border: solid 1px #E2C822;
+  padding: .5em;
+  margin: .5em 0;
+  color: #333;
+  background: #FFF9D7;
+}
+.pagination{
+  color: #424242;
+  margin: .5em 0 0 0;
+}
+.step{
+  border: solid 1px #ccc;
+  background-color: #f9f9f9;
+  padding: .2em .5em;
+  margin:0 .4em;
+}
+.nextLink, prevLink{
+  color: #424242;
+}
+.currentStep{
+  margin-right: .2em;
+  color: #3e2723;
+  font-weight: bold;
+}
+.odd{
+  background-color: #fffff9;
 }
