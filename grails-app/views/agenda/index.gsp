@@ -31,21 +31,25 @@
                     <div class="message" role="status">${flash.message}</div>
                 </g:if>
                 <f:table collection="${agendaList}" />
+                <nav>
+                  <ul>
+                    <li>
+                      <g:link action="create" class="btn btn-add btn-small">
+                        <g:message code="Adicionar Tarefa" />
+                      </g:link>
+                    </li>
+                  </ul>
+                </nav>
 
                 <div class="pagination">
                     <g:paginate total="${agendaCount ?: 0}" />
                 </div>
+                <div class="countRegister">
+                  Você possuí <i>${agendaCount}</i> Tarefas cadastradas
+                </div>
             </div>
           </main>
-          <nav class="clearfix">
-            <ul>
-              <li>
-                <g:link action="create" class="btn btn-add btn-small">
-                  <g:message code="Adicionar Tarefa" />
-                </g:link>
-              </li>
-            </ul>
-          </nav>
+
 
         <footer>
         </footer>

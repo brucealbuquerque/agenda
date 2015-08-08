@@ -2,6 +2,7 @@ package agenda
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import groovy.sql.Sql
 
 @Transactional(readOnly = true)
 class CategoriaController {
@@ -20,6 +21,10 @@ class CategoriaController {
     def create() {
         respond new Categoria(params)
     }
+
+        /*Bruce implementações*/
+
+
 
     @Transactional
     def save(Categoria categoria) {

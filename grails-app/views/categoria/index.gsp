@@ -26,8 +26,9 @@
               <div class="pagination">
                   <g:paginate total="${categoriaCount ?: 0}" />
               </div>
-
-
+              <div class="countRegister">
+                Você possuí <i>${categoriaCount}</i> Categorias cadastradas
+              </div>
           </div>
         </main>
       </div>

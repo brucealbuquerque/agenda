@@ -31,8 +31,11 @@ a{
   color: #424242;
 }
 a:visited{color: #424242;}
-main, nav{
+main{
   margin: 1em;
+}
+nav{
+  margin: 1em 0;
 }
 ul li{
   list-style: none;
@@ -147,6 +150,14 @@ ul li:last-child {
 .pagination{
   color: #424242;
   margin: .5em 0 0 0;
+  width: 50%;
+  float: left;
+}
+.countRegister{
+  float: left;
+  width: 50%;
+  text-align: right;
+  margin-top: .5em;
 }
 .step{
   border: solid 1px #ccc;
