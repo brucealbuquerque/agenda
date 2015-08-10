@@ -74,8 +74,9 @@ class CategoriaController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'categoria.label', default: 'Categoria'), categoria.id])
-                redirect categoria
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'categoria.label', default: 'Categoria: '), categoria.nome])
+                redirect action:"index"
+                //redirect categoria
             }
             '*'{ respond categoria, [status: OK] }
         }
@@ -94,7 +95,7 @@ class CategoriaController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'categoria.label', default: 'Categoria'), categoria.id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'categoria.label', default: 'Categoria: '), categoria.nome])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }

@@ -46,10 +46,12 @@ main table{
   width: 100%;
 }
 main table th{
-  background-color: #f2f2f2;
+  background-color: #424242;
   font-weight: normal;
-  padding: .3em;
+  padding: .5em.3em;
   text-align: left;
+  color: #fff;
+  border: #424242;
 }
 main table th a{
   color: #222;
@@ -58,8 +60,10 @@ main table td{
   padding: .5em;
   border: solid 1px #ccc;
 }
-main table td a:hover{text-decoration: underline;}
-
+main table td p{
+  float: left;
+  width: 50%;
+}
 input[type="text"], select{
   border: solid 1px #ccc;
   border-radius: 3px;
@@ -80,7 +84,7 @@ fieldset{
 .wrapper{
   font-family: Roboto;
   width: 70em;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   color: #424242;
 }
 .content{
@@ -89,8 +93,13 @@ fieldset{
   float: left;
   width: 100%;
 }
+
 .right{
   float: right;
+}
+.center{text-align: center;}
+footer{
+  margin: 1em 0;
 }
 
 /* buttons */
@@ -100,7 +109,9 @@ fieldset{
   outline: none;
   border-radius: 3px;
   color: #fff;
+  box-shadow: 1px 1px 2px #ccc;
 }
+
 ul li:first-child {
   margin-left: 0;
 }
@@ -111,6 +122,7 @@ ul li:last-child {
   cursor: pointer;
 }
 .btn:visited{color: #fff;}
+
 .btn-add{
   background-color:#01579b;
 }
@@ -120,13 +132,36 @@ ul li:last-child {
 .btn-back{
   background-color:  #795548;
 }
-.btn-edit{}
-.btn-del{}
+.btn-complete{
+  background-color: #0288d1;
+}
+.btn-edit{
+  background-color: #fbc02d;
+}
+.btn-del{
+  background-color: #e53935;
+}
 .btn-small{
-  padding: .5em 1em;
+  padding: .3em 1em;
 }
 .btn-large{
   padding: .5em 2em;
+}
+.atrasada{
+  background: #ffcdd2;
+}
+.noPrazo{
+  background-color: #dcedc8;
+}
+.completa td{
+  background: #f9f9f9;
+  color: #333;
+  opacity: .5;
+  cursor: not-allowed;
+}
+.completa .btn-del:hover{
+  opacity: none;
+  background-color: #f00;
 }
 /* scaffold*/
 .fieldcontain{

@@ -10,7 +10,14 @@ class AgendaController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Agenda.list(params), model:[agendaCount: Agenda.count()]
+
+        int qntAtividades = 0
+        for (Agenda x: Agenda.getAll()) {
+          if (!x.completa)
+            qntAtividades++
+        }
+
+        respond Agenda.list(params), model:[agendaCount: Agenda.count(), atvCompleta: qntAtividades]
     }
 
     def show(Agenda agenda) {
@@ -71,10 +78,26 @@ class AgendaController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'agenda.label', default: 'Agenda'), agenda.id])
-                redirect agenda
+                redirect action:"index"
+                //redirect agenda
             }
             '*'{ respond agenda, [status: OK] }
         }
+    }
+
+    @Transactional
+    def completar(Agenda agenda) {
+      if (agenda == null) {
+          transactionStatus.setRollbackOnly()
+          notFound()
+          return
+      }
+
+      agenda.completa = true
+      agenda.save flush:true
+
+      redirect(action: "index")
+
     }
 
     @Transactional
@@ -90,7 +113,7 @@ class AgendaController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'agenda.label', default: 'Agenda'), agenda.id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'agenda.label', default: 'Tarefa: '), agenda.tarefa])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }

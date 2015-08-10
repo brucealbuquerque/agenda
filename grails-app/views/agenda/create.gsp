@@ -11,7 +11,7 @@
           <div role="navigation">
               <ul>
                   <li class="right">
-                    <a class="btn btn-back btn-small" href="${createLink(uri: '/agenda')}" >Lista de Atividades</a>
+                    <a class="btn btn-back btn-small" href="${createLink(uri: '/agenda')}" >Ver Agenda</a>
                   </li>
               </ul>
           </div>
